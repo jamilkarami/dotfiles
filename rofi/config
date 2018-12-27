@@ -1,0 +1,7 @@
+rofi.color-enabled: true
+rofi.color-window: #181A21, #191A21, #181A21
+rofi.color-normal: #181A21, #cccccc, #181A21, #181A21, #4ec2e8
+rofi.color-active: #181A21, #fec7cd, #181A21, #181A21, #95c1c0
+rofi.color-urgent: #181A21, #f59335, #181A21, #181A21, #f59335  
+rofi.lines: 0
+rofi.width: 12
