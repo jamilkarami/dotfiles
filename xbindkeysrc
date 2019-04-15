@@ -58,11 +58,11 @@
   XF86AudioPrev
 
 # Increase Brightness
-"xbacklight -inc 10 && dunstify -t 1000 $(xbacklight -get) -r 23"
+"xbacklight -inc 10"
   XF86MonBrightnessUp
 
 # Decrease Brightness
-"xbacklight -dec 10 && dunstify -t 1000 $(xbacklight -get) -r 23" 
+"bldec"
   XF86MonBrightnessDown
 
 # Examples of commands:

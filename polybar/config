@@ -28,7 +28,7 @@ border-left-size = 10
 ;----------;
 
 bottom = false 
-monitor = eDP-1
+monitor = ${env:MONITOR:eDP-1}
 # wm-restack = none
 override-redirect = false
 
@@ -36,11 +36,11 @@ override-redirect = false
 ; FONTS ;
 ;-------;
 
-font-0 = "undefined medium:size=10;3"
-font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=12;3"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=12;3"
-font-3 = "Font Awesome 5 Brands:pixelsize=12;3"
-font-4 = Liberation Mono:size=11;3
+font-0 = "Anka/Coder Condensed:size=12;3"
+font-1 = "Noto Sans CJK SC:size=9;3"
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=12;3"
+font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=12;3"
+font-4 = "Font Awesome 5 Brands:pixelsize=12;3"
 
 ;--------;
 ; COLORS ;
@@ -74,13 +74,19 @@ tray-detached = true
 [module/i3]
 type = internal/i3
 
-pin-workspaces = true
+pin-workspaces = false
 strip-wsnumbers = true
 enable-scroll = false
-label-separator = " ·"
+label-separator = " "
 
 label-unfocused-foreground = $(colors.foreground)
-label-focused-foreground = #cccccc
+;label-focused-foreground = #cccccc
+label-focused-foreground = ${colors.alert}
+
+label-focused = %name%
+label-unfocused = %name%
+label-visible = %name%
+
 ; label-urgent-foreground = #F2A272
 
 [module/time]
@@ -113,7 +119,6 @@ format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
 format-charging =  <label-charging>
 
-format-full-background = #80000000 
 format-full-foreground = ${colors.foreground}
 
 ramp-capacity-0 = 
@@ -193,8 +198,7 @@ label =  %gb_used%
 [module/network]
 type = internal/network
 interface = wlp2s0
-label-connected =  %downspeed%
-; |  %upspeed%
+label-connected =  %downspeed% |  %upspeed%
 
 [bar/float]
 

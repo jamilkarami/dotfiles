@@ -31,7 +31,10 @@ Xft.lcdfilter: lcddefault
 *color14:	#3FDCEE
 *color15:	#BEBEC1
 
-URxvt.font:                      xft:undefined medium:size=12,xft:TerminessTTF Nerd Font Mono:size=12,xft:Inconsolata:size=12
+!URxvt.font:			  xft:Anka/Coder Condensed:size=12,xft:TerminessTTF Nerd Font Mono:size=12,xft:Inconsolata:size==12
+URxvt.font:			  xft:Monoid:size=10,xft:TerminessTTF Nerd Font Mono:size=12
+!URxvt.letterSpace:0
+
 
 !URxvt.font:                      ter-powerline-x14n.pcf.gz
 
